@@ -1,1 +1,22 @@
+import math
+
+def exibir_menu():
+    print("\n--- CALCULADORA DE 15 OPERAÇÕES ---")
+    print("1. Soma (+)")
+    print("2. Subtração (-)")
+    print("3. Multiplicação (*)")
+    print("4. Divisão (/)")
+    print("5. Potenciação (x^y)")
+    print("6. Raiz Quadrada (√x)")
+    print("7. Raiz Cúbica (³√x)")
+    print("8. Resto da Divisão (%)")
+    print("9. Divisão Inteira (//)")
+    print("10. Fatorial (x!)")
+    print("11. Logaritmo na Base 10 (log10)")
+    print("12. Logaritmo Natural (ln)")
+    print("13. Seno (sin) - em graus")
+    print("14. Cosseno (cos) - em graus")
+    print("15. Tangente (tan) - em graus")
+    print("0. Sair")
+
 
