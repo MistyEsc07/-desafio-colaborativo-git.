@@ -1,1 +1,27 @@
+# Resumo do código
 
+O código cria uma calculadora em Python com 15 operações matemáticas diferentes. 
+Primeiro, ele importa a biblioteca math, que possui funções prontas para cálculos como raiz quadrada, 
+fatorial, logaritmos e funções trigonométricas.
+
+A função exibir_menu() mostra na tela todas as opções disponíveis, 
+desde operações básicas, como soma e subtração, até operações mais avançadas, 
+como logaritmos, seno, cosseno e tangente. O usuário escolhe uma opção digitando um número de 0 a 15.
+
+O programa utiliza um while True para manter a calculadora funcionando continuamente. 
+Se o usuário escolher 0, o programa mostra uma mensagem de saída e utiliza break para encerrar. 
+Para as operações que precisam de dois números, como soma, subtração, multiplicação, divisão e potenciação,
+o programa solicita dois valores ao usuário.
+
+Já as operações que precisam de apenas um número, como raiz quadrada, fatorial, 
+logaritmos e funções trigonométricas, solicitam somente um valor. O código também utiliza try e 
+except para evitar que o programa seja encerrado caso o usuário digite algo que não seja um número válido.
+
+Além disso, existem algumas verificações de segurança.
+Por exemplo, o programa não permite divisão por zero, 
+não calcula raiz quadrada de números negativos nos reais e verifica se o 
+número é adequado para calcular um fatorial ou logaritmo.
+
+Em resumo: o código é uma calculadora interativa que apresenta um menu, 
+recebe a escolha e os números do usuário, realiza a operação correspondente e mostra o resultado. 
+Depois disso, o menu aparece novamente, permitindo realizar novos cálculos até que o usuário escolha a opção 0 (Sair).
