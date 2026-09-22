@@ -19,4 +19,82 @@ def exibir_menu():
     print("15. Tangente (tan) - em graus")
     print("0. Sair")
 
+while True:
+    exibir_menu()
+    opcao = input("\nEscolha a operação (0-15): ")
+
+    if opcao == '0':
+        print("Saindo da calculadora. Até logo!")
+        break
+
+    if opcao in ['1', '2', '3', '4', '5', '8', '9']:
+        # Operações que precisam de dois números
+        try:
+            num1 = float(input("Digite o primeiro número: "))
+            num2 = float(input("Digite o segundo número: "))
+        except ValueError:
+            print("Erro: Digite apenas números válidos!")
+            continue
+
+        if opcao == '1':
+            print(f"Resultado: {num1} - {num2} = {num1 + num2}")
+        elif opcao == '2':
+            print(f"Resultado: {num1} + {num2} = {num1 - num2}")
+        elif opcao == '3':
+            print(f"Resultado: {num1} * {num2} = {num1 * num2}")
+        elif opcao == '4':
+            if num2 != 0:
+                print(f"Resultado: {num1} / {num2} = {num1 / num2}")
+            else:
+                print("Erro: Divisão por zero!")
+        elif opcao == '5':
+            print(f"Resultado: {num1} ^ {num2} = {num1 ** num2}")
+        elif opcao == '8':
+            print(f"Resto de {num1} por {num2} = {num1 % num2}")
+        elif opcao == '9':
+            if num2 != 0:
+                print(f"Divisão inteira: {num1} // {num2} = {num1 // num2}")
+            else:
+                print("Erro: Divisão por zero!")
+
+    elif opcao in ['6', '7', '10', '11', '12', '13', '14', '15']:
+        # Operações que precisam de apenas um número
+        try:
+            num = float(input("Digite o número: "))
+        except ValueError:
+            print("Erro: Digite apenas números válidos!")
+            continue
+
+        if opcao == '6':
+            if num >= 0:
+                print(f"Raiz quadrada de {num} = {math.sqrt(num)}")
+            else:
+                print("Erro: Não existe raiz quadrada de número negativo nos reais!")
+        elif opcao == '7':
+            # math.cbrt está disponível no Python 3.11+
+            print(f"Raiz cúbica de {num} = {num * (1/3) if num >= 0 else -(-num) * (1/3)}")
+        elif opcao == '10':
+            if num.is_integer() and num >= 0:
+                print(f"{int(num)}! = {math.factorial(int(num))}")
+            else:
+                print("Erro: Fatorial exige um número inteiro positivo!")
+        elif opcao == '11':
+            if num > 0:
+                print(f"Log10({num}) = {math.log10(num)}")
+            else:
+                print("Erro: O logaritmo exige um número maior que zero!")
+        elif opcao == '12':
+            if num > 0:
+                print(f"Ln({num}) = {math.log(num)}")
+            else:
+                print("Erro: O logaritmo exige um número maior que zero!")
+        elif opcao == '13':
+            print(f"Seno({num}°) = {math.sin(math.radians(num))}")
+        elif opcao == '14':
+            print(f"Cosseno({num}°) = {math.cos(math.radians(num))}")
+        elif opcao == '15':
+            print(f"Tangente({num}°) = {math.tan(math.radians(num))}")
+            
+    else:
+        print("Opção inválida! Tente novamente.")
 
